@@ -1,0 +1,12 @@
+# Ignore build output directories
+target/
+
+.idea/
+.vscode/
+*.iml
+
+# Ignore logs
+*.log
+
+# Ignore environment variable files
+.env
