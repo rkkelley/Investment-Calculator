@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <h1>Compound Interest Calculator</h1>
+            <form id="compoundInterestForm">
+                <label for="principal">Principal:</label>
+                <input type="number" id="principal" required>
+
+                <label for="rate">Rate (%):</label>
+                <input type="number" id="rate" required>
+
+                <label for="time">Time (years):</label>
+                <input type="number" id="time" required>
+
+                <label for="recurringContribution">Contribution Per Month:</label>
+                <input type="number" id="recurringContribution" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="result">
+                <h3>Future Value: <span id="futureValue">-</span></h3>
+            </div>
+        </div>
+
+        <div class="program-info">
+            <h2>How It Works</h2>
+            <p><strong>Principal:</strong> The initial amount of money invested.</p>
+            <p><strong>Rate:</strong> The annual rate of return on investment.</p>
+            <p><strong>Time:</strong> The number of years the money will be invested.</p>
+            <p><strong>Contribution per month:</strong> The additional amount added every month.</p>
+            <p><strong>Future Value:</strong> The estimated total investment value before taxes and inflation.</p>
+            <p><strong>Graph Interpretation:</strong></p>
+            <ul>
+                <li><strong>Compound Interest Growth:</strong> Shows how the investment grows over time.</li>
+                <li><strong>Total Amount Invested:</strong> Represents principal + contributions.</li>
+                <li><strong>Inflation-Adjusted Value:</strong> Adjusts for an average 3.1% yearly inflation.</li>
+            </ul>
+        </div>
+    </div>
+
+    <canvas id="growthChart" width="400" height="200"></canvas>
+    <script src="script.js"></script> <!-- Link to JS file -->
+</body>
+</html>
